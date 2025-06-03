@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gentle Money by Adam Koren - A Compassionate Guide to Overcoming Financial Stress</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&family=Lato:wght@300;400;700&display=swap');
+
+        :root {
+            --font-serif: 'Lora', serif;
+            --font-sans: 'Lato', sans-serif;
+
+            --color-text: #004d40; /* Dark teal, similar to book title text */
+            --color-text-light: #00695c; /* Lighter teal for accents */
+            --color-primary-lightest: #e0f2f1; /* Very light teal/mint */
+            --color-primary-light: #b2dfdb; /* Light teal */
+            --color-primary-medium: #4db6ac; /* Medium teal */
+            --color-primary-dark: #00796b; /* Darker teal for buttons */
+            
+            --color-bg-warm-light: #f4f6f3; /* Warm off-white, slightly greenish */
+            --color-bg-section: #ffffff;
+
+            --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            --border-radius: 8px;
+        }
+
+        body {
+            margin: 0;
+            font-family: var(--font-sans);
+            color: var(--color-text);
+            background-color: var(--color-bg-warm-light);
+            line-height: 1.7;
+            font-size: 17px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        section {
+            padding: 60px 0;
+        }
+
+        section:nth-child(odd) {
+             /* background-color: var(--color-primary-lightest); */
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-serif);
+            color: var(--color-text);
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        h1 { font-size: 3rem; margin-bottom: 10px; }
+        h2 { font-size: 2.2rem; text-align: center; margin-bottom: 40px; }
+        h3 { font-size: 1.8rem; }
+
+        p {
+            margin-bottom: 1.5em;
+            max-width: 700px; /* For readability */
+        }
+        
+        .center-text {
+            text-align: center;
+        }
+
+        /* Navigation */
+        nav {
+            background: linear-gradient(135deg, var(--color-primary-light), var(--color-primary-medium));
+            padding: 15px 0;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        nav .logo {
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--color-primary-lightest);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to bottom, #f0fff0, #e0f2f1 70%); /* Light minty green to light teal */
+            padding: 80px 0;
+            text-align: left;
+        }
+
+        .hero .container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .hero-content {
+            flex: 1.2;
+        }
+        
+        .hero-content .subtitle {
+            font-size: 1.3rem;
+            color: var(--color-text-light);
+            margin-bottom: 20px;
+            font-family: var(--font-sans);
+            font-weight: 400;
+        }
+        
+        .hero-content p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        .hero-image {
+            flex: 0.8;
+            text-align: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            width: 350px; /* Adjust as needed */
+            height: auto;
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 30px rgba(0, 77, 64, 0.2);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--color-primary-dark);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: var(--border-radius);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .cta-button:hover {
+            background-color: var(--color-text); /* Darker teal on hover */
+            transform: translateY(-2px);
+        }
+        
+        /* Wave Separator (Example) */
+        .wave-separator {
+            position: relative;
+            height: 100px; /* Adjust height */
+            overflow: hidden;
+        }
+        .wave-separator svg {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+        }
+
+
+        /* Problem Section */
+        #problem .container p {
+            font-size: 1.2rem;
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* About the Book Section */
+        #about-book {
+            background-color: var(--color-primary-lightest);
+        }
+        
+        #about-book ul {
+            list-style: none;
+            padding-left: 0;
+            max-width: 750px;
+            margin: 30px auto;
+        }
+
+        #about-book ul li {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        #about-book ul li::before {
+            content: '●'; /* Bullet point */
+            color: var(--color-primary-dark);
+            position: absolute;
+            left: 0;
+            font-size: 1.5em;
+            line-height: 1;
+        }
+        
+        .book-highlight {
+            font-style: italic;
+            color: var(--color-text-light);
+            text-align: center;
+            font-size: 1.2rem;
+            margin-top: 30px;
+            display: block;
+        }
+
+        /* Author Section */
+        #author {
+            background-color: var(--color-bg-warm-light);
+        }
+        .author-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .author-photo {
+            flex: 0 0 200px; /* Fixed width for photo container */
+        }
+        
+        .author-photo img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: var(--shadow);
+            border: 5px solid white;
+        }
+
+        .author-bio {
+            flex: 1;
+        }
+        
+        .author-bio p a {
+            color: var(--color-primary-dark);
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .author-bio p a:hover {
+            text-decoration: underline;
+        }
+
+        /* Call to Action Section */
+        #cta {
+            background: linear-gradient(to top, #f0fff0, #e0f2f1 70%);
+            text-align: center;
+        }
+        
+        #cta p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons .cta-button {
+            margin: 0 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--color-text);
+            color: var(--color-primary-lightest);
+            text-align: center;
+            padding: 30px 20px;
+        }
+        
+        footer p {
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--color-primary-light);
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 1.8rem; }
+            .container { width: 95%; padding: 20px 15px; }
+
+            nav .container { flex-direction: column; }
+            nav .logo { margin-bottom: 10px; }
+            nav ul { flex-direction: column; text-align: center; }
+            nav ul li { margin: 10px 0; }
+
+            .hero .container {
+                flex-direction: column-reverse; /* Image on top on mobile */
+                text-align: center;
+            }
+            .hero-content { text-align: center; }
+            .hero-content .subtitle { margin-left: auto; margin-right: auto;}
+            .hero-content p { margin-left: auto; margin-right: auto;}
+
+            .author-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .author-photo { margin-bottom: 20px; }
+            
+            .cta-buttons .cta-button {
+                display: block;
+                margin: 10px auto;
+                width: fit-content;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">Gentle Money</a>
+            <ul>
+                <li><a href="#about-book">About The Book</a></li>
+                <li><a href="#author">About Adam</a></li>
+                <li><a href="#cta">Get Your Copy</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Gentle Money</h1>
+                <p class="subtitle">A Compassionate Guide to Overcoming Financial Stress</p>
+                <p>Transform your relationship with money from one of fear and confusion to one of ease and clarity. "Gentle Money" offers a practical and kind approach to navigating your finances and building lasting well-being.</p>
+                <a href="#cta" class="cta-button">Get Your Copy Today</a>
+            </div>
+            <div class="hero-image">
+                <img src="https://storage.googleapis.com/generativeai-downloads/images/037695261a1a5a4e.png" alt="Book cover of Gentle Money by Adam Koren">
+            </div>
+        </div>
+    </header>
+    
+    <!-- Wavy Separator inspired by book cover - subtle -->
+    <div style="background: linear-gradient(to bottom, #e0f2f1, var(--color-bg-warm-light)); height: 50px;">
+      <svg viewBox="0 0 1440 120" style="transform: translateY(1px); background-color: var(--color-bg-warm-light);" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1440,80C1200,80,960,20,720,20S240,80,0,80V120H1440Z" fill="#e0f2f1"/>
+      </svg>
+    </div>
+
+
+    <section id="problem">
+        <div class="container">
+            <h2>Feeling Stressed About Your Finances?</h2>
+            <p>When it’s time to look at your finances, do you feel a sense of mastery and calm? Or, like many of us, would you rather face anything else than your financial anxiety, distress, and shame? You're not alone, and there's a gentler way.</p>
+        </div>
+    </section>
+
+    <section id="about-book">
+        <div class="container">
+            <h2>Inside Gentle Money</h2>
+            <p class="center-text" style="max-width: 800px; margin:0 auto 30px auto;">Drawing on his extensive experience supporting people through their most tangled financial challenges, Adam Koren illuminates the deep-seated reasons why finances are so hard in our culture. He offers a compassionate and practical approach to help you:</p>
+            <ul>
+                <li>Understand why you avoid dealing with your finances so you can start doing it differently.</li>
+                <li>Navigate common financial hurdles like budgeting, saving, debt, taxes, and income.</li>
+                <li>Uncover the roots of your financial beliefs and understand how they impact you now.</li>
+                <li>Develop a gentle approach to money that fosters self-acceptance and confidence.</li>
+            </ul>
+            <p class="book-highlight">Whether you're struggling with debt, feeling lost in retirement planning, or just seeking a more peaceful relationship with your finances, Gentle Money provides the tools and insights you need to create lasting financial well-being. It’s a short, easy read that results in long-lasting changes.</p>
+        </div>
+    </section>
+    
+    <!-- Another subtle wave separator -->
+    <div style="background: linear-gradient(to bottom, var(--color-primary-lightest), var(--color-bg-warm-light)); height: 50px;">
+      <svg viewBox="0 0 1440 120" style="transform: translateY(1px); background-color: var(--color-bg-warm-light);" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1440,80C1200,80,960,20,720,20S240,80,0,80V120H1440Z" fill="var(--color-primary-lightest)"/>
+      </svg>
+    </div>
+
+    <section id="author">
+        <div class="container">
+            <h2>Meet Adam Koren</h2>
+            <div class="author-content">
+                <div class="author-photo">
+                    <img src="https://via.placeholder.com/200x200.png?text=Adam+Koren" alt="Adam Koren, author of Gentle Money">
+                </div>
+                <div class="author-bio">
+                    <p>Financial coach Adam Koren guides you on a journey to transform your relationship with money. With extensive experience supporting individuals through complex financial challenges, Adam brings a unique blend of practical wisdom and compassionate understanding to the often-stressful topic of personal finance.</p>
+                    <p>His work focuses on illuminating the deep-seated reasons why finances can be so difficult, offering tools and insights to foster self-acceptance, confidence, and lasting financial well-being. You can learn more about Adam and his approach at <a href="http://adamkoren.com" target="_blank" rel="noopener noreferrer">adamkoren.com</a>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cta">
+        <div class="container">
+            <h2>Ready to Embrace Gentle Money?</h2>
+            <p>Start your journey towards financial peace and clarity. "Gentle Money" is a short, easy read designed to create long-lasting positive changes in your life.</p>
+            <div class="cta-buttons">
+                <a href="#amazon-link-placeholder" class="cta-button">Buy on Amazon (Pre-order)</a>
+                <a href="#other-retailers-placeholder" class="cta-button" style="background-color: var(--color-primary-medium);">Other Retailers</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© <script>document.write(new Date().getFullYear())</script> Adam Koren. All Rights Reserved.</p>
+            <p><a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms of Service</a> (Placeholders)</p>
+        </div>
+    </footer>
+
+</body>
+</html>
