@@ -219,6 +219,7 @@
             margin-bottom: 15px;
             padding-left: 30px;
             position: relative;
+            text-align: center; /* Reverted from !important */
         }
 
         #about-book ul li::before {
@@ -236,7 +237,12 @@
             text-align: center;
             font-size: 1.2rem;
             margin-top: 30px;
+            /* Inherits margin-bottom from p, max-width from p */
+            margin-left: auto;  /* Center the block */
+            margin-right: auto; /* Center the block */
             display: block;
+            /* Explicitly set max-width if it wasn't inheriting, but p has it */
+            max-width: 700px; /* Ensure it respects the desired width */
         }
 
         /* Author Section */
@@ -378,7 +384,7 @@
     </header>
     
     <!-- Wavy Separator inspired by book cover - subtle -->
-    <div style="background: linear-gradient(to bottom, #e0f2f1, var(--color-bg-warm-light)); height: 50px;">
+    <div style="background: linear-gradient(to bottom, #e0f2f1, var(--color-bg-warm-light)); height: 50px; overflow: hidden;">
       <svg viewBox="0 0 1440 120" style="transform: translateY(1px); background-color: var(--color-bg-warm-light);" xmlns="http://www.w3.org/2000/svg">
         <path d="M1440,80C1200,80,960,20,720,20S240,80,0,80V120H1440Z" fill="#e0f2f1"/>
       </svg>
@@ -388,7 +394,7 @@
     <section id="problem">
         <div class="container">
             <h2>Feeling Stressed About Your Finances?</h2>
-            <p>When it’s time to look at your finances, do you feel a sense of mastery and calm? Or, like many of us, would you rather face anything else than your financial anxiety, distress, and shame? You're not alone, and there's a gentler way.</p>
+            <p>When it's time to look at your finances, do you feel a sense of mastery and calm? Or, like many of us, would you rather face anything else than your financial anxiety, distress, and shame? You're not alone, and there's a gentler way.</p>
         </div>
     </section>
 
@@ -402,12 +408,12 @@
                 <li>Uncover the roots of your financial beliefs and understand how they impact you now.</li>
                 <li>Develop a gentle approach to money that fosters self-acceptance and confidence.</li>
             </ul>
-            <p class="book-highlight">Whether you're struggling with debt, feeling lost in retirement planning, or just seeking a more peaceful relationship with your finances, Gentle Money provides the tools and insights you need to create lasting financial well-being. It’s a short, easy read that results in long-lasting changes.</p>
+            <p class="book-highlight">Whether you're struggling with debt, feeling lost in retirement planning, or just seeking a more peaceful relationship with your finances, Gentle Money provides the tools and insights you need to create lasting financial well-being. It's a short, easy read that results in long-lasting changes.</p>
         </div>
     </section>
     
     <!-- Another subtle wave separator -->
-    <div style="background: linear-gradient(to bottom, var(--color-primary-lightest), var(--color-bg-warm-light)); height: 50px;">
+    <div style="background: linear-gradient(to bottom, var(--color-primary-lightest), var(--color-bg-warm-light)); height: 50px; overflow: hidden;">
       <svg viewBox="0 0 1440 120" style="transform: translateY(1px); background-color: var(--color-bg-warm-light);" xmlns="http://www.w3.org/2000/svg">
         <path d="M1440,80C1200,80,960,20,720,20S240,80,0,80V120H1440Z" fill="var(--color-primary-lightest)"/>
       </svg>
