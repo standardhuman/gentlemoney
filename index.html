@@ -219,7 +219,6 @@
             margin-bottom: 15px;
             padding-left: 30px;
             position: relative;
-            text-align: center; /* Reverted from !important */
         }
 
         #about-book ul li::before {
@@ -312,6 +311,10 @@
         footer p {
             margin-bottom: 5px;
             font-size: 0.9rem;
+            max-width: 700px;  /* Ensure max width */
+            margin-left: auto;   /* Center the p block */
+            margin-right: auto;  /* Center the p block */
+            /* text-align: center; is inherited from footer, but can be explicit if needed */
         }
 
         footer a {
